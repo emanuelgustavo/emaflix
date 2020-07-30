@@ -21,7 +21,8 @@ const Container = styled.ul`
   }
   
   .slick-prev {
-    left: 0;
+    left: 16px;
+    background-color: 'red';
   }
   .slick-next {
     right: 16px;
@@ -38,17 +39,18 @@ export const SliderItem = styled.li`
   }
 `;
 
+const sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  centerMode: false,
+  variableWidth: true,
+  adaptiveHeight: true,
+};
 
-const Slider = ({ children }) => (
-  <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: false,
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-    }}
+const Slider = ({ children, categoryColor }) => (
+  <Container categoryColor={categoryColor} >
+    <SlickSlider {...sliderSettings}
     >
       {children}
     </SlickSlider>

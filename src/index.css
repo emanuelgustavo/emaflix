@@ -4,14 +4,15 @@
 }
 
 :root {
-  --primary: #2A7AE4;
-  --black: #000000;
-  --blackLighter: #9E9E9E;
-  --grayLight: #F5F5F5;
-  --grayMedium: #e5e5e5; 
-  --white: #FFFFFF;
-  --frontEnd: #6BD1FF;
-  --backEnd: #00C86F;
+  /*colors from nord theme*/
+  --primary: #5E81AC;
+  --black: #2E3440;
+  --blackLighter: #3B4252;
+  --grayLight: #D8DEE9;
+  --grayMedium: #E5E9F0; 
+  --white: #ECEFF4;
+  --frontEnd: #88C0D0;
+  --backEnd: #8FBCBB;
 }
 
 html,

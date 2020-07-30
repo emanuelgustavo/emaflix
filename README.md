@@ -1,4 +1,4 @@
-# Aluraflix
+# EMAFLIX <img alt="Logo do projeto" width="150px" src="https://github.com/emanuelgustavo/emaflix/blob/master/src/assets/img/Logo.png" />
 
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/imersao-alura/aluraflix/blob/master/LICENSE)
 

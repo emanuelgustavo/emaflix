@@ -22,7 +22,6 @@ const Container = styled.ul`
   
   .slick-prev {
     left: 16px;
-    background-color: 'red';
   }
   .slick-next {
     right: 16px;
@@ -45,13 +44,12 @@ const sliderSettings = {
   speed: 500,
   centerMode: false,
   variableWidth: true,
-  adaptiveHeight: true,
+  adaptiveHeight: true
 };
 
-const Slider = ({ children, categoryColor }) => (
-  <Container categoryColor={categoryColor} >
-    <SlickSlider {...sliderSettings}
-    >
+const Slider = ({ children }) => (
+  <Container>
+    <SlickSlider {...sliderSettings} >
       {children}
     </SlickSlider>
   </Container>

@@ -40,32 +40,20 @@ function CadastroCategoria() {
           value={novaCategoria.nome || ''}
           onChange={handleMudancaValor}
         />
-        {false &&
-          <label>Nome da Categoria:
-          <input
-              type="text"
-              value={novaCategoria.nome || ""}
-              name="nome"
-              onChange={handleMudancaValor}
-            />
-          </label>
-        }
-        <label>Descrição da Categoria:
-          <textarea
-            type="text"
-            value={novaCategoria.descricao || ""}
-            name="descricao"
-            onChange={event => handleMudancaValor(event)}
-          />
-        </label>
-        <label>Cor da Categoria:
-          <input
-            type="color"
-            value={novaCategoria.cor || ""}
-            name="cor"
-            onChange={event => handleMudancaValor(event)}
-          />
-        </label>
+        <FormField
+          label={'Descrição da Categoria:'}
+          type={'textarea'}
+          name={'descricao'}
+          value={novaCategoria.descricao || ''}
+          onChange={handleMudancaValor}
+        />
+        <FormField
+          label={'Cor da Categoria:'}
+          type={'color'}
+          name={'cor'}
+          value={novaCategoria.cor || ''}
+          onChange={handleMudancaValor}
+        />
         <button
           onClick={event => handleAdicionaNovaCategoria(event)}
         >

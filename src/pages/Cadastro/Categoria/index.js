@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import PageDefault from '../../../components/PageDefault';
+import FormField from '../../../components/FormField';
 
 function CadastroCategoria() {
 
@@ -31,14 +33,23 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>Cadastro de Categoria: {novaCategoria.nome || ""}</h1>
       <form>
-        <label>Nome da Categoria:
+        <FormField
+          label={'Nome da Categoria:'}
+          type={'text'}
+          name={'nome'}
+          value={novaCategoria.nome || ''}
+          onChange={handleMudancaValor}
+        />
+        {false &&
+          <label>Nome da Categoria:
           <input
-            type="text"
-            value={novaCategoria.nome || ""}
-            name="nome"
-            onChange={handleMudancaValor}
-          />
-        </label>
+              type="text"
+              value={novaCategoria.nome || ""}
+              name="nome"
+              onChange={handleMudancaValor}
+            />
+          </label>
+        }
         <label>Descrição da Categoria:
           <textarea
             type="text"

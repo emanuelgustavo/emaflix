@@ -1,9 +1,6 @@
 import React from 'react';
 
 const FormField = ({ label, type, name, value, onChange }) => {
-
-    console.log(label, type, name, value, onChange)
-
     return (
         <div>
             <label>
@@ -16,7 +13,7 @@ const FormField = ({ label, type, name, value, onChange }) => {
                 />
             </label>
         </div>
-    )
+    );
 };
 
 export default FormField;

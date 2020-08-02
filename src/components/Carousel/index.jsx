@@ -18,9 +18,11 @@ function Carousel({ ignoreFirstVideo, category, }) {
             {categoryTitle}
           </Title>
           {categoryExtraLink &&
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}
-            </ExtraLink>
+            (
+              <ExtraLink href={categoryExtraLink.url} target="_blank">
+                {categoryExtraLink.text}
+              </ExtraLink>
+            )
           }
         </>
       )}

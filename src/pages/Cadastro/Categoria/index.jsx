@@ -9,29 +9,31 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
   const [novaCategoria, setNovaCategoria] = useState({});
 
-  const handleMudancaValor = event => {
-    handleNovaCategoria(
-      event.target.getAttribute('name'),
-      event.target.value
-    );
-  }
-
   const handleNovaCategoria = (chave, valor) => {
     setNovaCategoria({
       ...novaCategoria,
-      [chave]: valor
+      [chave]: valor,
     });
-  }
+  };
+
+  const handleMudancaValor = (event) => {
+    handleNovaCategoria(
+      event.target.getAttribute('name'),
+      event.target.value,
+    );
+  };
 
   const handleAdicionaNovaCategoria = event => {
     event.preventDefault();
     setCategorias([...categorias, novaCategoria]);
     setNovaCategoria({});
-  }
+  };
 
   return (
     <PageDefault>
-      <h1>Cadastro de Categoria: {novaCategoria.nome || ""}</h1>
+      <h1>
+        Cadastro de Categoria: {novaCategoria.nome || ""}
+      </h1>
       <form>
         <FormField
           label={'Nome da Categoria:'}
@@ -66,12 +68,12 @@ function CadastroCategoria() {
             <li key={`${categoria.nome}${index}`}>
               {JSON.stringify(categoria)}
             </li>
-          )
+          );
         })}
       </ul>
       <Link to="/">Ir para home</Link>
     </PageDefault>
-  )
+  );
 }
 
 export default CadastroCategoria;

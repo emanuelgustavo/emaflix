@@ -44,15 +44,15 @@ const sliderSettings = {
   speed: 500,
   centerMode: false,
   variableWidth: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
 };
 
 const Slider = ({ children }) => (
   <Container>
-    <SlickSlider {...sliderSettings} >
+    <SlickSlider {...sliderSettings}>
       {children}
     </SlickSlider>
   </Container>
 );
 
-export default Slider; 
+export default Slider;

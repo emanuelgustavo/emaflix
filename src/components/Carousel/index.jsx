@@ -1,14 +1,15 @@
 import React from 'react';
-import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
+import PropTypes from 'prop-types';
+
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 
-function Carousel({ ignoreFirstVideo, category, }) {
-
+const Carousel = ({ ignoreFirstVideo, category }) => {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
-  const videos = category.videos;
+  const { videos } = category;
 
   return (
     <VideoCardGroupContainer>
@@ -45,6 +46,11 @@ function Carousel({ ignoreFirstVideo, category, }) {
       </Slider>
     </VideoCardGroupContainer>
   );
-}
+};
 
 export default Carousel;
+
+Carousel.propTypes = {
+  ignoreFirstVideo: PropTypes.bool.isRequired,
+  category: PropTypes.object.isRequired,
+};

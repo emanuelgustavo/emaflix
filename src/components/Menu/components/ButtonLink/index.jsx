@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function ButtonLink({ href, className, children }) {
   // props => { className: "o que alguém passar", href: "/" }
@@ -10,3 +11,9 @@ function ButtonLink({ href, className, children }) {
 }
 
 export default ButtonLink;
+
+ButtonLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

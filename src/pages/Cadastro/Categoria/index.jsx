@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 
-function CadastroCategoria() {
+const CadastroCategoria = () => {
 
   const [categorias, setCategorias] = useState([]);
   const [novaCategoria, setNovaCategoria] = useState({});
@@ -74,6 +74,6 @@ function CadastroCategoria() {
       <Link to="/">Ir para home</Link>
     </PageDefault>
   );
-}
+};
 
 export default CadastroCategoria;
